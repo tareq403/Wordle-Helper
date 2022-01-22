@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wordle Helper</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<div>
+		<form target="#" id="wordle-form">
+			<table>
+				<tr>
+					<td colspan="5">
+						<label for="not-present">Characters not present:</label>
+						<input type="text" name="not-present" id="not-present" class="large-text absent-char">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="at-1">Character at place #1:</label>
+					</td>
+					<td>
+						<label for="at-2">Character at place #2:</label>
+					</td>
+					<td>
+						<label for="at-3">Character at place #3:</label>
+					</td>
+					<td>
+						<label for="at-4">Character at place #4:</label>
+					</td>
+					<td>
+						<label for="at-5">Character at place #5:</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" name="at-1" id="at-1" class="at-place-char" maxlength="1">
+					</td>
+					<td>
+						<input type="text" name="at-2" id="at-2" class="at-place-char" maxlength="1">
+					</td>
+					<td>
+						<input type="text" name="at-3" id="at-3" class="at-place-char" maxlength="1">
+					</td>
+					<td>
+						<input type="text" name="at-4" id="at-4" class="at-place-char" maxlength="1">
+					</td>
+					<td>
+						<input type="text" name="at-5" id="at-5" class="at-place-char" maxlength="1">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="not-at-1">Characters not at place #1:</label>
+					</td>
+					<td>
+						<label for="not-at-2">Characters not at place #2:</label>
+					</td>
+					<td>
+						<label for="not-at-3">Characters not at place #3:</label>
+					</td>
+					<td>
+						<label for="not-at-4">Characters not at place #4:</label>
+					</td>
+					<td>
+						<label for="not-at-5">Characters not at place #5:</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" name="not-at-1" id="not-at-1" class="not-at-place-char">
+					</td>
+					<td>
+						<input type="text" name="not-at-2" id="not-at-2" class="not-at-place-char">
+					</td>
+					<td>
+						<input type="text" name="not-at-3" id="not-at-3" class="not-at-place-char">
+					</td>
+					<td>
+						<input type="text" name="not-at-4" id="not-at-4" class="not-at-place-char">
+					</td>
+					<td>
+						<input type="text" name="not-at-5" id="not-at-5" class="not-at-place-char">
+					</td>
+				</tr>
+			</table>
+			<input type="submit" name="submit" value="Get Word Suggestions">
+		</form>
+
+		<h4 id="result-header">Suggested words</h4>
+		<div id="result-text">Please put values, and then try.</div>
+	</div>
+
+	<script type="text/javascript" src="./word-list.js"></script>
+	<script type="text/javascript" src="./wordle-helper.js"></script>
+</body>
+</html>

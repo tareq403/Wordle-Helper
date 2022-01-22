@@ -1,0 +1,81 @@
+input[type=text], select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.large-text {
+  width: 100%;
+}
+
+.absent-char {
+  background-color: #787c7e;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-transform: uppercase;
+  user-select: none;
+  letter-spacing: 5px;
+}
+
+.at-place-char {
+  background-color: #6aaa64;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.not-at-place-char {
+  background-color: #c9b458;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-transform: uppercase;
+  user-select: none;
+  letter-spacing: 5px;
+}
+
+.word {
+  padding: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#result-text {
+  overflow-x: auto;
+}
