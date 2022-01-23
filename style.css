@@ -32,6 +32,11 @@ div {
   width: 100%;
 }
 
+.content-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
 .absent-char {
   background-color: #787c7e;
   justify-content: center;
@@ -55,6 +60,7 @@ div {
   color: #ffffff;
   text-transform: uppercase;
   user-select: none;
+  width: 90%;
 }
 
 .not-at-place-char {
@@ -68,6 +74,7 @@ div {
   text-transform: uppercase;
   user-select: none;
   letter-spacing: 5px;
+  width: 90%;
 }
 
 .word {
@@ -76,6 +83,27 @@ div {
   font-weight: bold;
 }
 
+#result-section-border {
+  display: none;
+}
+
+#result-header {
+  display: none;
+}
+
 #result-text {
-  overflow-x: auto;
+  overflow: auto;
+  flex-wrap: wrap;
+  padding: 0;
+  display: none;
+}
+
+.help-container {
+  padding: 0;
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
 }

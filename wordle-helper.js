@@ -1,6 +1,15 @@
 $(document).ready(function() {
-	console.log("Loaded");
-	console.log(words.length);
+
+	$("#help-toggle").click(function (event) {
+		$(".help-container").toggle();
+		$(".video-link").toggle();
+		if ($("#help-toggle").html().indexOf("Hide") < 0) {
+			$("#help-toggle").html($("#help-toggle").html().replace("Show", "Hide"));
+		} else {
+			$("#help-toggle").html($("#help-toggle").html().replace("Hide", "Show"));
+		}
+		event.preventDefault();
+	})
 
 	$("#wordle-form").submit(function(event) {
 		var candidates = words.slice();
@@ -38,6 +47,9 @@ $(document).ready(function() {
 		else {
 			$("#result-text").html("No matching word found");
 		}
+		$("#result-header").css("display", "block");
+		$("#result-text").css("display", "flex");
+		$("#result-section-border").css("display", "block");
 		event.preventDefault();
 	});
 

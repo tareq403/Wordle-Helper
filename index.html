@@ -6,32 +6,80 @@
 	<title>Wordle Helper</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="./style.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWXNW00ZXN"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-EWXNW00ZXN');
+	</script>
 </head>
 <body>
 	<div>
+		<h1>Wordle Helper</h1>
+		<a id="help-toggle" href="">[Show instructions]</a> <a class="video-link" href="">[Watch video assistance]</a>
+		<div class="help-container">
+			<p class="help">
+				<strong>What is Wordle?</strong><br><br>
+				<a href="https://www.powerlanguage.co.uk/wordle/">Wordle</a> is a very popular word game, where you can try to
+				figure out the target 5-letter word within six tries. Wordle is developed by <a href="https://twitter.com/powerlanguish">Josh Wardle</a>. Players get a new word everyday to find out in Wordle website.
+
+			</p>
+			<p class="help">
+				<strong>What is the purpose of this website?</strong><br><br>
+				The purpose of this website is to assist users to find out the target word by providing word suggestions, to solve Worlde. 
+			</p>
+			<p class="help">
+				<strong>How does it work?</strong><br><br>
+				While playing Wordle, you will get three different types of letters:
+				<ul>
+					<li><font color="#787c7e">Letters that are not present in the target word</font></li>
+					<li><font color="#6aaa64">Letters that are present in the target word in a specific place</font></li>
+					<li><font color="#c9b458">Letters that are present in the target word, but not in a specific place</font></li>
+				</ul>
+				In this Wordle Helper, you can put these constraints, and then hit "Get Word Suggestions" button to get word suggestions
+				for the current game state.
+
+				You can try multiple times as the game progresses, until you figure out the correct word. You can watch <a href="">this video</a>
+				to understand how Wordle Helper works.
+
+			</p>
+		</div>
+		<hr/>
 		<form target="#" id="wordle-form">
-			<table>
+			<table class="content-table">
 				<tr>
 					<td colspan="5">
-						<label for="not-present">Characters not present:</label>
+						<label for="not-present"><h4>Letters not present:</h4></label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="5">
 						<input type="text" name="not-present" id="not-present" class="large-text absent-char">
 					</td>
 				</tr>
 				<tr>
+					<td colspan="5">
+						<h4>Letter at:</h4>
+					</td>
+				</tr>
+				<tr>
 					<td>
-						<label for="at-1">Character at place #1:</label>
+						<label for="at-1">Place #1:</label>
 					</td>
 					<td>
-						<label for="at-2">Character at place #2:</label>
+						<label for="at-2">Place #2:</label>
 					</td>
 					<td>
-						<label for="at-3">Character at place #3:</label>
+						<label for="at-3">Place #3:</label>
 					</td>
 					<td>
-						<label for="at-4">Character at place #4:</label>
+						<label for="at-4">Place #4:</label>
 					</td>
 					<td>
-						<label for="at-5">Character at place #5:</label>
+						<label for="at-5">Place #5:</label>
 					</td>
 				</tr>
 				<tr>
@@ -52,20 +100,25 @@
 					</td>
 				</tr>
 				<tr>
+					<td colspan="5">
+						<h4>Letters present but not at:</h4>
+					</td>
+				</tr>
+				<tr>
 					<td>
-						<label for="not-at-1">Characters not at place #1:</label>
+						<label for="not-at-1">Place #1:</label>
 					</td>
 					<td>
-						<label for="not-at-2">Characters not at place #2:</label>
+						<label for="not-at-2">Place #2:</label>
 					</td>
 					<td>
-						<label for="not-at-3">Characters not at place #3:</label>
+						<label for="not-at-3">Place #3:</label>
 					</td>
 					<td>
-						<label for="not-at-4">Characters not at place #4:</label>
+						<label for="not-at-4">Place #4:</label>
 					</td>
 					<td>
-						<label for="not-at-5">Characters not at place #5:</label>
+						<label for="not-at-5">Place #5:</label>
 					</td>
 				</tr>
 				<tr>
@@ -89,11 +142,21 @@
 			<input type="submit" name="submit" value="Get Word Suggestions">
 		</form>
 
+		<hr id="result-section-border"/>
 		<h4 id="result-header">Suggested words</h4>
 		<div id="result-text">Please put values, and then try.</div>
+
+		<p>
+			<i><strong>Disclaimer:</strong> This website is only for entertainment purpose, who wants to play around with the Wordle game. We are not associated with the official Wordle game in any way. Also, the list of words are not exhastive here, therefore, the target
+			word may not be present in the suggested words, resulting in a failure to solve the puzzle.</i>
+		</p>
 	</div>
+
 
 	<script type="text/javascript" src="./word-list.js"></script>
 	<script type="text/javascript" src="./wordle-helper.js"></script>
+
+	<footer>&copy; Copyright 2022 <a href="https://alnoortareq.com" target="_blank">Mahmud Al-Noor Tareq</a> |
+	 <a target="_blank" href="https://github.com/tareq403/Wordle-Helper">Source Code</a></footer>
 </body>
 </html>
