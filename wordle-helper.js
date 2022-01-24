@@ -23,7 +23,7 @@ $(document).ready(function() {
 
 		for (let i=0; i<5; i++) {
 			let presentCh = $("#at-" + (i+1)).val().toLowerCase();
-			if (presentCh != null && presentCh != "") {
+			if (presentCh != null && presentCh != "" && isValidChar(presentCh[0])) {
 				candidates = filterWordsWithCharAtPlace(candidates, presentCh, i);
 			}
 
@@ -71,7 +71,7 @@ $(document).ready(function() {
 
 	var filterWordsWithCharAtPlace = function (wordList, ch, index) {
 		return wordList.filter (function (word) {
-			return word.indexOf(ch) == index;
+			return word[index] == ch;
 		});
 	};
 });
